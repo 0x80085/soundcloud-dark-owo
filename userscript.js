@@ -686,6 +686,10 @@
        background-position-x: 0;
        background-position-y: 0;
     }
+
+    body {
+       font-family: 'Inter', sans-serif !important;
+    }
     
     `.replaceAll(";", " !important;")
          .replaceAll("...", " ;")
