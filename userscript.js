@@ -9,13 +9,6 @@
 // @namespace https://greasyfork.org/users/154395
 // ==/UserScript==
 
-/*
-  Extensions by 0x80085
-  added GIF to home screen 
-  include dark theme to add to playlist modal
-  maybe other stuff i forgot but patched un-darked modals mostly 
-*/
-
 (function () {
   'use strict';
 
@@ -676,21 +669,28 @@
         color: var(--jtc-sc-root-text);
     }
     .addToPlaylist > section {
-    	background-color: black;
+      background-color: black;
       color: white;
     }
-    
+
     .sc-classic  .header__logoLink {
        background-image: url(https://media.tenor.com/CkUXnAoOwUoAAAAM/monika-glitch.gif);
        background-size: 68px 46px;
        background-position-x: 0;
        background-position-y: 0;
     }
-
-    body {
-       font-family: 'Inter', sans-serif !important;
+    .commentItem__body  {
+       color: white;
     }
-    
+    .commentItem__usernameLink {
+      color: white;
+    }
+
+     body {
+
+       font-family: 'Inter', sans-serif !important;
+     }
+
     `.replaceAll(";", " !important;")
          .replaceAll("...", " ;")
          .replaceAll("$BTN_EXCLUDE", ":not(.reportCopyright):not(.hintButton):not(.sc-classic .playbackSoundBadge .playbackSoundBadge__follow):not(.sc-classic .playbackSoundBadge .playbackSoundBadge__like):not(.sc-button-nostyle):not(.sc-button-next):not(.sc-button-pause):not(.sc-button-play):not(.sc-button-prev):not(.sc-button-blocked)")
